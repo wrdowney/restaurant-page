@@ -1,7 +1,7 @@
 import {loadMenu} from './menu.js';
-import {loadHomePage} from './home';
+import {loadHome} from './home';
 
-let content = document.getElementById('content');
+let body = document.querySelector('body');
 
 //Website header and navbar
 function createHeader() {
@@ -57,9 +57,8 @@ function setActiveTab(button) {
 }
 
 function initializeWebsite() {
-    content.appendChild(createHeader());
-    loadMenu();
-    loadHomePage();
+    body.insertBefore(createHeader(), document.getElementById('content'));
+    loadHome()
 }
 
 export default initializeWebsite;
