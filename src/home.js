@@ -1,7 +1,7 @@
 let content = document.getElementById('content');
 
 //loads home page
-function loadHomePage() {
+function loadHome() {
 }
 
-export {loadHomePage};
+export {loadHome};
