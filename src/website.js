@@ -1,5 +1,6 @@
-import {loadMenu} from './menu.js';
+import {loadMenu} from './menu';
 import {loadHome} from './home';
+import {loadContact} from './contact';
 
 let content = document.getElementById('content');
 
@@ -40,7 +41,7 @@ function createNavBar() {
     contactTab.addEventListener('click', (e) => {
         if(e.target.classList.contains('active')) return;
         setActiveTab(contactTab);
-        loadHome();
+        loadContact();
     });
 
     nav.appendChild(homeTab);
