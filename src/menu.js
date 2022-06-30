@@ -3,7 +3,6 @@ let content = document.getElementById('content');
 function loadMenu() {
 
     let main = document.querySelector('.main');
-    main.style.width = '60%';
 
     main.innerHTML = ''; //clear content from previous page
 
