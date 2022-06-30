@@ -6,6 +6,9 @@ let body = document.querySelector('body');
 //Website header and navbar
 function createHeader() {
     let header = document.createElement('header');
+    let title = document.createElement('h1');
+    title.innerHTML = 'Taqueria El Ranchito';
+    header.appendChild(title);
     header.appendChild(createNavBar());
     return header;
 }

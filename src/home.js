@@ -10,6 +10,8 @@ function loadHome() {
     review.classList.add('content-section');
     let reviewText = document.createElement('p');
     reviewText.innerHTML = '"The best restaurant in the world!"';
+    let reviewAuthor = document.createElement('b');
+    reviewAuthor.innerHTML = '- John Doe';
     review.appendChild(reviewText);
     content.appendChild(review);
 
