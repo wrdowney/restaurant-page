@@ -1,9 +1,9 @@
 let content = document.getElementById('content');
-let main = document.createElement('div');
-main.classList.add('main');
+
 
 //loads home page
 function loadHome() {
+    let main = document.querySelector('.main');
     main.innerHTML = '';
     let heading = document.createElement('div');
     heading.classList.add('heading');

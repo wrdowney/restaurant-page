@@ -31,7 +31,7 @@ function createNavBar() {
     menuTab.addEventListener('click', (e) => {
         if(e.target.classList.contains('active')) return;
         setActiveTab(menuTab);
-        loadHome();
+        loadMenu();
     });
 
     let contactTab = document.createElement('button');
@@ -46,6 +46,7 @@ function createNavBar() {
     nav.appendChild(homeTab);
     nav.appendChild(menuTab);
     nav.appendChild(contactTab);
+    setActiveTab(homeTab);
 
     return nav;
 }
@@ -61,7 +62,10 @@ function setActiveTab(button) {
 
 function initializeWebsite() {
     let header = createHeader();
+    let main = document.createElement('div');
+    main.classList.add('main');
     content.appendChild(header);
+    content.appendChild(main);
     loadHome()
 }
 
