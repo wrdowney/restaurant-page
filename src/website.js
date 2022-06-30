@@ -1,7 +1,7 @@
 import {loadMenu} from './menu.js';
 import {loadHome} from './home';
 
-let body = document.querySelector('body');
+let content = document.getElementById('content');
 
 //Website header and navbar
 function createHeader() {
@@ -22,7 +22,7 @@ function createNavBar() {
     homeTab.addEventListener('click', (e) => {
         if(e.target.classList.contains('active')) return;
         setActiveTab(homeTab);
-        loadHomePage();
+        loadHome();
     });
 
     let menuTab = document.createElement('button');
@@ -31,7 +31,7 @@ function createNavBar() {
     menuTab.addEventListener('click', (e) => {
         if(e.target.classList.contains('active')) return;
         setActiveTab(menuTab);
-        loadHomePage();
+        loadHome();
     });
 
     let contactTab = document.createElement('button');
@@ -40,7 +40,7 @@ function createNavBar() {
     contactTab.addEventListener('click', (e) => {
         if(e.target.classList.contains('active')) return;
         setActiveTab(contactTab);
-        loadHomePage();
+        loadHome();
     });
 
     nav.appendChild(homeTab);
@@ -60,8 +60,9 @@ function setActiveTab(button) {
 }
 
 function initializeWebsite() {
-    body.insertBefore(createHeader(), document.getElementById('content'));
+    let header = createHeader();
+    content.appendChild(header);
     loadHome()
 }
 
-export default initializeWebsite;
+export {initializeWebsite};
