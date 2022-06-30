@@ -25,7 +25,7 @@ function loadContact() {
 
     //contact manager
     let contactManager = document.createElement('div');
-    concontactManager.classList.add('contact-section');
+    contactManager.classList.add('contact-section');
     contactManager.innerHTML = '<b>Manager:</b>';
     let contactManagerName = document.createElement('p');
     contactManagerName.innerHTML = 'Jane Doe';
